@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Conteúdo IA</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Central de Conteúdo IA</h1>
+        <p>Gere posts, anúncios e ideias de vídeos com IA.</p>
+    </header>
+
+    <main class="container">
+        <section id="geracao-texto" class="ferramenta">
+            <h2>✍️ Gerador de Posts e Anúncios</h2>
+            <div class="input-group">
+                <label for="tipo-conteudo">O que você deseja criar?</label>
+                <select id="tipo-conteudo">
+                    <option value="post_blog">Postagem para Blog</option>
+                    <option value="anuncio">Anúncio para Redes Sociais</option>
+                    <option value="ideia_video">Ideia para Capa/Roteiro de Vídeo</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="prompt-texto">Qual é o tema principal?</label>
+                <textarea id="prompt-texto" placeholder="Ex: 5 dicas essenciais para donos de Shih Tzu"></textarea>
+            </div>
+            <button onclick="gerarConteudo()">Gerar Conteúdo com IA</button>
+            
+            <div id="resultado-texto" class="resultado">
+                <h3>Resultado da IA:</h3>
+                <p id="status-texto">Pronto para receber o tema.</p>
+                <textarea id="output-texto" readonly></textarea>
+            </div>
+        </section>
+
+        <section id="geracao-imagem" class="ferramenta">
+            <h2>🖼️ Gerador de Imagem IA (Capas de Vídeo)</h2>
+            <div class="input-group">
+                <label for="prompt-imagem">Descreva o estilo da capa:</label>
+                <textarea id="prompt-imagem" placeholder="Ex: Um cão da raça Shih Tzu sorrindo, em estilo desenho animado, cores vibrantes, fundo azul claro."></textarea>
+            </div>
+            <button onclick="gerarImagem()">Gerar Capa de Vídeo com IA</button>
+            
+            <div id="resultado-imagem" class="resultado">
+                <h3>Resultado da Capa:</h3>
+                <img id="output-imagem" src="" alt="Imagem gerada pela IA" style="display:none; max-width: 100%;">
+                <p id="status-imagem">Pronto para receber o prompt.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Conexão segura com Servidor Replit.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
